@@ -1,0 +1,20 @@
+import math as mt
+
+def compute_value(a, b):
+    if 0 <= b <= 1:
+        return b
+    else:
+        return 1 / mt.fabs(a) + mt.exp(-b)
+
+print("Output:", compute_value(1, 2))
+
+# ----------------------------
+
+def recursive_print(start, end):
+    print(start)
+    if start == end:
+        return
+    else:
+        recursive_print(start - 1, end)
+
+recursive_print(10, 0)
